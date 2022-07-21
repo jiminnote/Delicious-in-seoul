@@ -7,8 +7,8 @@ class User(TimeStampModel):
     email         = models.CharField(max_length = 45,unique = True,null=True)
     kakao_id      = models.BigIntegerField(unique = True, null=True)
     nickname      = models.CharField(max_length = 20,unique = True)
-    profile_image = models.URLField()
-    password      = models.CharField(max_length = 25)
+    profile_image = models.URLField(null=True)
+    password      = models.CharField(max_length = 100)
     category      = models.ForeignKey("restaurants.Category",on_delete = models.CASCADE)
 
     class Meta:
