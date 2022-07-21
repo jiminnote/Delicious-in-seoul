@@ -17,15 +17,20 @@ class Category(models.Model):
         db_table = 'categories'
 
 class Restaurant(TimeStampModel):
-    category      = models.ForeignKey("Category",on_delete=models.CASCADE)
-    conformation  = models.ForeignKey("Conformation",on_delete=models.CASCADE)
-    name          = models.CharField(max_length=50)
-    address       = models.CharField(max_length=255)
-    phone_number  = models.CharField(max_length=12,null=True)
-    businss_hours = models.CharField(max_length=20,null=True)
-    url           = models.URLField(null=True)
-    atitude       = models.DecimalField(max_digits=16, decimal_places=14, default=0.0)
-    longitude     = models.DecimalField(max_digits=17, decimal_places=14, default=0.0)
+    category          = models.ForeignKey("Category",on_delete=models.CASCADE)
+    conformation      = models.ForeignKey("Conformation",on_delete=models.CASCADE)
+    information       = models.CharField(max_length=50,null=True)
+    name              = models.CharField(max_length=50)
+    is_parking        = models.BooleanField(default=False)
+    road_name_address = models.CharField(max_length=255)
+    address           = models.CharField(max_length=255)
+    phone_number      = models.CharField(max_length=12)
+    open_time         = models.CharField(max_length=20,null=True)
+    break_time        = models.CharField(max_length=20,null=True)
+    day_off           = models.CharField(max_length=20,null=True)
+    url               = models.URLField()
+    latitude          = models.DecimalField(max_digits=16, decimal_places=14, default=0.0)
+    longitude         = models.DecimalField(max_digits=17, decimal_places=14, default=0.0)
 
     class Meta:
         db_table = 'restaurants'
@@ -45,7 +50,6 @@ class menus(models.Model):
         db_table = 'menus'
 
 class RestaurantImage(models.Model):
-    name       = models.CharField(max_length=255)
     restaurant = models.ForeignKey("Restaurant",on_delete=models.CASCADE)
     url        = models.URLField()
 
