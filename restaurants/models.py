@@ -24,13 +24,13 @@ class Restaurant(TimeStampModel):
     is_parking        = models.BooleanField(default=False)
     road_name_address = models.CharField(max_length=255)
     address           = models.CharField(max_length=255)
-    phone_number      = models.CharField(max_length=12)
+    phone_number      = models.CharField(max_length=20)
     open_time         = models.CharField(max_length=20,null=True)
     break_time        = models.CharField(max_length=20,null=True)
     day_off           = models.CharField(max_length=20,null=True)
     url               = models.URLField()
-    latitude          = models.DecimalField(max_digits=16, decimal_places=14, default=0.0)
-    longitude         = models.DecimalField(max_digits=17, decimal_places=14, default=0.0)
+    latitude          = models.DecimalField(max_digits=20, decimal_places=14, default=0.0)
+    longitude         = models.DecimalField(max_digits=20, decimal_places=14, default=0.0)
 
     class Meta:
         db_table = 'restaurants'
