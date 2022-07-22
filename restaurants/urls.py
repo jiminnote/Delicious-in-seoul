@@ -1,7 +1,6 @@
 from django.urls import path
-
-#from .views import 
+from restaurants.views import SearchView
 
 urlpatterns = [
-
+    path('',SearchView.as_view())
 ]
