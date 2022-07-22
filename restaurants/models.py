@@ -17,7 +17,7 @@ class Category(models.Model):
         db_table = 'categories'
 
 class Restaurant(TimeStampModel):
-    category          = models.ForeignKey("Category",on_delete=models.CASCADE)
+    category          = models.ForeignKey("Category",on_delete=models.CASCADE,null=True)
     conformation      = models.ForeignKey("Conformation",on_delete=models.CASCADE)
     information       = models.CharField(max_length=50,null=True)
     name              = models.CharField(max_length=50)

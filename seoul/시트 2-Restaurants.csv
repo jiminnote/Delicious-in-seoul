@@ -1,5 +1,4 @@
-Id,name,categoryId,address,latitude,longitude,conformation_Id,is_parking,road_name_address,phone_number,open_time,day_off,break_time,Url,information
-
+Id,name,category_id,address,latitude,longitude,conformation_Id,is_parking,road_name_address,phone_number,open_time,day_off,break_time,Url,information
 1,함박찌,1,서울특별시 강북구 도봉로15길 11 2F,127.029178,37.6163069,1,True,서울시 강북구 미아동 460-116 2F,010-0000-0000,11:00 ~ 21:00,월,15:00~17:00,www.naver.com,
 2,물렁,1,서울특별시 종로구 자하문로16길 8 1F,126.971868,37.5814653,2,True,서울시 종로구 창성동 87-1 1F,010-0000-0000,10:00 ~ 22:00,화,15:00~16:00,www.naver.com,
 3,쉐시몽몽,1,서울특별시 마포구 월드컵로10길 48 동궁빌딩 1F,126.914206,37.5552541,3,True,서울시 마포구 서교동 478-3 동궁빌딩 1F,010-0000-0000,11:00 ~ 21:00,수,,www.naver.com,
