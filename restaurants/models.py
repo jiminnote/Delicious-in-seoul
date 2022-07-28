@@ -41,7 +41,7 @@ class Conformation(models.Model):
     class Meta:
         db_table = 'conformations'
 
-class menus(models.Model):
+class Menu(models.Model):
     name       = models.CharField(max_length=255)
     restaurant = models.ForeignKey("Restaurant",on_delete=models.CASCADE)
     price      = models.DecimalField(max_digits = 15, decimal_places = 3)
