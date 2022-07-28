@@ -1,6 +1,7 @@
 from django.urls import path
-from restaurants.views import SearchView
+from restaurants.views import SearchView,CategoryView
 
 urlpatterns = [
-    path('',SearchView.as_view())
+    path('/search',SearchView.as_view()),
+    path('',CategoryView.as_view())
 ]
